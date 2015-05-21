@@ -11,13 +11,22 @@ describe("Square", function() {
     it("should be 4 for a square", function() {
       expect(square.area()).toEqual(4);
     });
-  });
-
-  describe("Perimeter", function() {
-    it("should be 8 for a square with side length 2", function() {
-      expect(square.area()).toEqual(8);
+   it("should be 25 for a square", function() {
+      square = new Square(5, "red");
+      expect(square.area()).toEqual(25);
     });
   });
 
-  // Write more specs!!
+  
+  describe("Perimeter", function() {
+    it("should be 8 for a square with side length 2", function() {
+      expect(square.perimeter()).toEqual(8);
+    });
+    it("should be 20 for a square with side length 5", function() {
+       square = new Square(5, "red");
+      expect(square.perimeter()).toEqual(20);
+    });
+  });
+
+  
 });
